@@ -18,6 +18,7 @@ header h1{
     padding: 10px 0;
     text-align: center;
     border-style: solid;
+    border-image: radial-gradient(circle, #17024a, #1f0139, #000000) 1;
     border-width: 0 0 2px 0;
     font-family: "Titillium Web", sans-serif;
     font-weight: 200;
@@ -43,7 +44,8 @@ body, header {
 .timeline-container {
     display: flex;
     position: absolute;
-    max-width: 800px;
+    max-width: 40px;
+    height: 30px;
     margin-left: 41px;
 }
 .timeline-labels {
@@ -51,6 +53,36 @@ body, header {
     flex-shrink: 0; 
     position: relative;
     padding-top: 10px;
+}
+.timeline-category {
+    position: absolute;
+    left: 10px;
+    top: 150px;
+    
+    transform-origin: 0 0; 
+    transform: rotate(-90deg) translateY(-50%);
+    
+    width: auto; 
+    white-space: nowrap;
+    
+    padding: 5px 10px;
+    color: white; 
+    background-image: radial-gradient(
+        ellipse at center, 
+        var(--line-category-color) 0%, 
+        var(--line-category-color) 50%,
+        #050505 100%
+    );
+    
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 1.115em;
+    font-weight: 700;
+    z-index: 3;
+    margin-right: 0px;
+    
+    border-bottom: none;
+    text-align: left;
 }
 
 .timeline-content:hover {
@@ -62,7 +94,7 @@ body, header {
     margin: 0;
     font-size: 1.2em;
     color:rgb(197, 197, 197);
-     text-shadow: 0 0 10px #FF0000;
+     text-shadow: 0 0 10px #610101;
 }
 
 .timeline p {
@@ -77,7 +109,8 @@ body, header {
     padding: 0;
     position: relative;
     width: 100%; 
-    max-width: 600px; 
+    max-width: 600px;
+    margin-top: 70px; 
     margin-left: 30px;
     box-shadow: 0 0 55px rgba(178,34,34,0.35);
 }
@@ -120,29 +153,6 @@ body, header {
     padding-left: 60px;
 }
 
-.timeline-category {
-    position: absolute;
-    left: 10px;
-    top: 150px;
-    
-    transform-origin: 0 0; 
-    transform: rotate(-90deg) translateY(-50%);
-    
-    width: auto; 
-    white-space: nowrap;
-    
-    padding: 5px 10px;
-    color: white; 
-    background-color: var(--line-category-color, #B22222);
-    border-radius: 5px;
-    font-size: 1.2em;
-    font-weight: 700;
-    z-index: 3;
-    margin-right: 0px;
-    
-    border-bottom: none;
-    text-align: left;
-}
 .timeline-content {
     
     padding: 20px;
@@ -153,13 +163,13 @@ body, header {
 }
     /* coloring and positioning */
 .republic-era {
-     --line-category-color: #B22222;
+     --line-category-color: #b2222297;
 }
 .clone-wars-era {
-     --line-category-color: #228B22;
+     --line-category-color: #228b2284;
 }
 .empire-era {
-     --line-category-color: #6A5ACD;
+     --line-category-color: #695acd79;
 }
 
 .timeline-labels .republic-era {
