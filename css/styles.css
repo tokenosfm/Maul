@@ -9,7 +9,7 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
+    /* header */
 header h1{
     color: rgb(255, 255, 255);
         text-shadow:
@@ -37,6 +37,7 @@ header h1{
 body, header {
     font-family: "Titillium Web", Arial, sans-serif;
 }
+    /* body */
    body {
     background: radial-gradient(circle at top, #050505, #000);
 }
@@ -79,7 +80,6 @@ body, header {
     background-color: transparent;
     border-radius: 5px;
     font-size: 1.115em;
-    font-weight: 700;
     z-index: 3;
     margin-right: 0px;
 
