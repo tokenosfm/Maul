@@ -137,7 +137,7 @@ body, header {
     transform-origin: left center;
     animation: fadeSlide 0.8s ease forwards;
 }
-
+    /* coloring and positioning */
 .republic-era {
      --line-category-color: #B22222;
 }
@@ -147,19 +147,17 @@ body, header {
 .empire-era {
      --line-category-color: #6A5ACD;
 }
+
 .timeline-labels .republic-era {
-    top: 500px; /* PRZYKŁAD: Pozycja pionowa od góry sekcji */
+    top: 500px; 
 }
-
-/* 2. CLONE WARS */
 .timeline-labels .clone-wars-era {
-    top: 1300px; /* PRZYKŁAD: Pozycja, która znajdzie się na środku sekcji klonów */
+    top: 1300px;
+}
+.timeline-labels .empire-era {
+    top: 1900px;
 }
 
-/* 3. EMPIRE */
-.timeline-labels .empire-era {
-    top: 1900px; /* PRZYKŁAD */
-}
 .timeline img {
     width: 100%;
     max-width: 300px; 
