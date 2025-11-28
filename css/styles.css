@@ -23,10 +23,21 @@ body, header {
     font-family: "Titillium Web", Arial, sans-serif;
     background-color: #f4f4f4;
 }
-
-    /* TIMELINE */
-    body {
+   body {
     background: radial-gradient(circle at top, #050505, #000);
+}
+    /* TIMELINE */
+.timeline-container {
+    display: flex;
+    position: absolute;
+    max-width: 800px;
+    margin-left: 41px;
+}
+.timeline-labels {
+    width: 150px;
+    flex-shrink: 0; 
+    position: relative;
+    padding-top: 10px;
 }
 
 .timeline-content:hover {
@@ -51,9 +62,9 @@ body, header {
     list-style: none;
     padding: 0;
     position: relative;
-    margin-left: 5vw;
-    max-width: 600px;
-    margin-right: auto;
+    width: 100%; 
+    max-width: 600px; 
+    margin-left: 30px;
     box-shadow: 0 0 55px rgba(178,34,34,0.35);
 }
 
@@ -95,22 +106,13 @@ body, header {
     padding-left: 60px;
 }
 
-.timeline-category-group {
-    height: 100px;
-    max-width: 100px;
-    padding-left: 0;
-    margin-bottom: 0px; 
-    margin-top: 0px;
-    position: relative;
-}
-
-.timeline-category-group .timeline-category {
+.timeline-category {
     position: absolute;
-    left: 22.5px;
-    top: 100%;
+    left: 10px;
+    top: 150px;
     
     transform-origin: 0 0; 
-    transform: rotate(-90deg) translateY(-50%); 
+    transform: rotate(-90deg) translateY(-50%);
     
     width: auto; 
     white-space: nowrap;
@@ -144,6 +146,19 @@ body, header {
 }
 .empire-era {
      --line-category-color: #6A5ACD;
+}
+.timeline-labels .republic-era {
+    top: 500px; /* PRZYKŁAD: Pozycja pionowa od góry sekcji */
+}
+
+/* 2. CLONE WARS */
+.timeline-labels .clone-wars-era {
+    top: 1300px; /* PRZYKŁAD: Pozycja, która znajdzie się na środku sekcji klonów */
+}
+
+/* 3. EMPIRE */
+.timeline-labels .empire-era {
+    top: 1900px; /* PRZYKŁAD */
 }
 .timeline img {
     width: 100%;
