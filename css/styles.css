@@ -48,12 +48,26 @@ body, header {
     gap: 40px;
     max-width: 1400px;
 }
-.master-header-column {
-    width: 40%;
+.master-head-column {
+    flex: 1;
+    max-width: 90%;
+    list-style: none;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     color: #eee;
     position: relative;
-    top: 40px;
     align-self: flex-start;
+}
+.side-content-block {
+    margin-bottom: 10px;
+    max-width: 400px;
+    font-size: 0.7em;
+    line-height: 1.6;
+    color: #ccc;
+
+
 }
 
     /* TIMELINE */
