@@ -44,7 +44,7 @@ body, header {
 .master-layout {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
     gap: 40px;
     max-width: 1400px;
 }
@@ -58,22 +58,19 @@ body, header {
 
     /* TIMELINE */
 .timeline-container {
-    position: relative; 
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 50px;
-    margin-left: 50px;
+    position: relative;
+    gap: 20p;
+    padding: 20px;
 }
 .timeline-labels {
     width: 150px;
-    flex-shrink: 0; 
+    flex-shrink: 1; 
     position: relative;
     padding-top: 10px;
 }
 .timeline-category {
     position: absolute;
-    left: 10px;
+    left: 22px;
     top: 150px;
     
     transform-origin: 0 0; 
@@ -132,7 +129,6 @@ body, header {
     flex: 1;
     max-width: 600px;
     margin-top: 70px; 
-    margin-left: 50px;
     box-shadow: 0 0 55px rgba(178,34,34,0.35);
 }
 .timeline-event {

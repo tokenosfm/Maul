@@ -1,6 +1,4 @@
-1. Gradient przez 3 kolory
-2. Wypróbować napis w headerze na neon
-3. Naprawić nazwy epok!!!!
-4. Wypróbować transparentny wizerunek Maula jako tło
 5. Wypełnić stronę treścią
 6. Zaprojektować feater
+7. Projekt na mobilki
+8. (Opcjonalnie) rozbudować na inne strony.
