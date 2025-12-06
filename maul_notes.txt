@@ -2,3 +2,4 @@
 6. Zaprojektować feater
 7. Projekt na mobilki
 8. (Opcjonalnie) rozbudować na inne strony.
+9. Upewnij się, że flexbox ma 3 główne elementy (Timeline, nagłówek, Content)
