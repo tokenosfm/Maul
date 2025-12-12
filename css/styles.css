@@ -45,48 +45,11 @@ body, header {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    flex-shrink: 0;
-    gap: 40px;
-    max-width: 1400px;
-}
-.master-head-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-}
-.section-header {
-    text-align: center;
-    margin-bottom: 30px;
-    width: 50%;
-}
-.master-head-column-1, .master-head-column-2 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
-    list-style: none;
-    margin: 50px;
+    margin-left: 10px;
+    margin-right: auto;
     margin-top: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    color: #eee;
-    position: relative;
-    align-self: flex-start;
-}
-.side-content-block {
     margin-bottom: 10px;
-    max-width: 800px;
-    font-size: 1em;
-    line-height: 1.6;
-    color: #ccc;
-    display: flex;
-    flex-direction: column;
+    gap: 10px;
 }
 
     /* TIMELINE */
@@ -159,9 +122,9 @@ body, header {
     padding: 0;
     position: relative;
     width: 100%; 
-    flex: 1;
     max-width: 600px;
-    margin-top: 70px; 
+    margin-top: 70px;
+    margin-left: 5px;
     box-shadow: 0 0 55px rgba(178,34,34,0.35);
 }
 .timeline-event {
@@ -232,6 +195,55 @@ body, header {
 .timeline-labels .empire-era {
     top: 1900px;
 }
+    /* side content */
+.section-header {
+    text-align: start;
+    margin-bottom: 10px;
+    width: 100%;
+    color: #eee;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #610101;
+}
+.section-header h1{
+    text-align: center;
+    font-size: 3.5em;
+    margin: 0;
+    text-shadow: 0 0 10px #ff0000;
+}
+.master-head-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 150px;
+}
+.master-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.master-head-column-1, .master-head-column-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    margin-top: 0;
+    max-width: 600px;
+}
+
+.side-content-block {
+    margin-bottom: 10px;
+    max-width: 800px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ccc;
+}
     /* images */
 .timeline img {
     width: 100%;
@@ -271,7 +283,7 @@ body, header {
     top: 75%;
     left: 80%;
     transform: translate(-50%, -50%);
-    opacity: 0.6;
+    opacity: 0.4;
     z-index: -1;
     max-width: 80%;
     height: auto;
