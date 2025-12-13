@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+:root {
+    --line-color: #B22222;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+    /* header */
+header {
+    position: relative;
+}
+.header-nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+body, header {
+    font-family: "Titillium Web", Arial, sans-serif;
+}
+body {
+    background: radial-gradient(circle at top, #050505, #000);
+}
+header h1{
+    color: rgb(255, 255, 255);
+        text-shadow:
+        0 0 10px #FF0000,
+        0 0 20px #FF4500, 
+        0 0 30px #FFD700;
+    padding: 10px 0;
+    text-align: center;
+    border-style: solid;
+    border-image: radial-gradient(circle, #17024a, #1f0139, #000000) 1;
+    border-width: 0 0 2px 0;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+@media (max-width: 900px) {
+        .header-nav {
+        position: static;
+        text-align: center;
+        padding-top: 15px;
+        margin-bottom: -10px;
+        }
+    }
