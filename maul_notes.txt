@@ -1,5 +1,3 @@
-5. Wypełnić stronę treścią
-6. Zaprojektować feater
-7. Projekt na mobilki
-8. (Opcjonalnie) rozbudować na inne strony.
-9. Upewnij się, że flexbox ma 3 główne elementy (Timeline, nagłówek, Content)
+1. rozbudować na inne strony.
+2. dodać więcej przycisków nawigacyjnych
+3. dodać javascript do strony

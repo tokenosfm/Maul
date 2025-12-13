@@ -13,6 +13,31 @@ html {
     scroll-behavior: smooth;
 }
     /* header */
+header {
+    position: relative;
+}
+.header-nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+.home-btn {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(178, 34, 34, 0.1);
+    padding: 10px 15px;
+    border: 1px solid var(--line-color);
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.home-btn:hover {
+    color: #fff;
+    background: var(--line-color);
+    box-shadow: 0 0 15px var(--line-color);
+    text-shadow: 0 0 5px #fff;
+}
 header h1{
     color: rgb(255, 255, 255);
         text-shadow:
@@ -102,9 +127,23 @@ body, header {
 }
     /* timeline content */
 .timeline-content:hover {
-    transform: scale(1.02);
+    transform: scale(1.02) translateX(10px);
+    background: rgba(20, 5, 5, 0.95);
+    border-color: rgba(178, 34, 34, 0.6);
     box-shadow: 0 0 35px var(--line-color);
+    cursor: default;
 }
+.timeline-content:hover h2 {
+    color: #fff; 
+    text-shadow: 0 0 15px #ff0000;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.timeline-content:hover p.timeline-description {
+    color: #e0e0e0;
+    text-shadow: 0 0 1px rgba(0,0,0,0.5);
+    transform: scale(1.01);
+}
+
 
 .timeline h2 {
     margin: 0;
@@ -138,11 +177,14 @@ body, header {
 
 .timeline-content {
     
+    background: rgba(10, 10, 10, 0.3); 
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0,0,0,.8);
     transform-origin: left center;
     animation: fadeSlide 0.8s ease forwards;
+    border: 1px solid rgba(178, 34, 34, 0.1); 
+    box-shadow: 0 0 20px rgba(0,0,0,.8);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
     /* left lines */
@@ -217,7 +259,7 @@ body, header {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    gap: 150px;
+    gap: 100px;
 }
 .master-head {
     display: flex;
@@ -242,7 +284,7 @@ body, header {
     font-size: 1.2em;
     line-height: 1.6;
     color: #ccc;
-    padding: 100px 0;
+    padding: 50px 0;
 }
 .img-caption {
     font-size: 0.7em;
@@ -278,7 +320,6 @@ body, header {
     transform: scale(1.1);
     box-shadow: 0 0 45px var(--line-color);
 }
-    /* animations */
 @keyframes fadeSlide {
     from {
         opacity: 0;
@@ -291,8 +332,10 @@ body, header {
 }
 .background-image {
     position: absolute;
-    top: 75%;
-    left: 80%;
+    top: 100%;
+    left: 50%;
+    bottom: 50%;
+    right: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.4;
     z-index: -1;
@@ -387,7 +430,17 @@ footer {
 }
 /* --- RESPONSIVE DESIGN (Mobile) --- */
 @media (max-width: 900px) {
-
+    .header-nav {
+        position: static;
+        text-align: center;
+        padding-top: 15px;
+        margin-bottom: -10px;
+    }
+    
+    .home-btn {
+        padding: 5px 15px;
+        font-size: 0.8em;
+    }
     .master-layout {
         flex-direction: column;
         align-items: center;
@@ -442,7 +495,6 @@ footer {
     
     .timeline-category {
         display: none; 
-        /* position: relative; top: 0; left: 0; transform: none; margin-bottom: 10px; */
     }
 
     .side-content-block {
