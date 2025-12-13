@@ -145,12 +145,6 @@ body, header {
     animation: fadeSlide 0.8s ease forwards;
 }
 
-@media (max-width: 600px) {
-    .timeline {
-        margin-left: 5vw;
-        max-width: 95vw;
-    }
-}
     /* left lines */
 
 .timeline::before {
@@ -380,6 +374,93 @@ footer {
     margin: 0;
 }
 @media (max-width: 600px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .footer-bottom {
+        justify-content: center;
+    }
+}
+/* --- RESPONSIVE DESIGN (Mobile) --- */
+@media (max-width: 900px) {
+
+    .master-layout {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;     
+        gap: 40px;
+    }
+
+    .master-head {
+        order: -1;
+        width: 100%;
+        padding: 0;
+    }
+
+    .timeline {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .master-head-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .master-head-column-1, 
+    .master-head-column-2 {
+        max-width: 100%; 
+    }
+
+    .section-header h1 {
+        font-size: 2.5em; 
+        line-height: 1.1;
+    }
+
+    .section-header p {
+        font-size: 1em;
+    }
+
+    .timeline::before, 
+    .timeline::after {
+        left: 20px;
+    }
+
+    .timeline-event {
+        padding-left: 45px;
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .timeline-category {
+        display: none; 
+        /* position: relative; top: 0; left: 0; transform: none; margin-bottom: 10px; */
+    }
+
+    .side-content-block {
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    .side-content-block img,
+    .timeline img {
+        max-width: 100%;
+        margin: 15px auto;
+    }
+
+    .background-image {
+        display: none;
+    }
+    
+    /* Footer */
     .footer-top {
         flex-direction: column;
         align-items: center;
