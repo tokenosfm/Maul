@@ -4,7 +4,7 @@
     text-align: center;
     padding: 60px 20px;
     border-bottom: 2px solid var(--line-color);
-    background: radial-gradient(circle at center, #1a0505, #000);
+    background: radial-gradient(circle at center, #0c0707, #000);
 }
 
 .home-header h1 {
@@ -27,6 +27,9 @@
     margin: 0 auto;
     padding: 40px 20px;
 }
+header h1 {
+    border-style: none;
+}
 
 .about-me {
     text-align: center;
@@ -46,7 +49,6 @@
 /* --- NAV GRID --- */
 .nav-grid {
     display: grid;
-    /* To tworzy siatkę: kolumny dopasowują się same, minimum 300px szerokości */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 30px;
 }
@@ -71,15 +73,15 @@
 }
 
 .clonewars-card {
-    background: linear-gradient(45deg, #002, #000);
+    background: linear-gradient(45deg, rgb(0, 34, 3), #000);
 }
 
 .empire-card {
-    background: linear-gradient(45deg, #222, #000);
+    background: linear-gradient(45deg, #0d0521, #000);
 }
 
-.legends-card {
-    background: linear-gradient(45deg, #330, #000);
+.sidious-card {
+    background: linear-gradient(45deg, rgb(26, 26, 23), #000);
 }
 
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Sith Archives - The Clone Wars</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/clone_wars.css">
+    <link rel="icon" href="./img/maul_icon.png">
+</head>
+<body id="top">
+    
+    <section class="gallery-section">
+    <h2>The Clone Wars Chronicles</h2>
+    
+    <div class="carousel-container">
+        
+        <div class="slide active">
+            <img src="./img/tano_vs_maul.jpg" alt="Ahsoka Tano fighting Maul">
+            <div class="caption">Siege of Mandalore</div>
+        </div>
+        
+        <div class="slide">
+            <img src="./img/501st_legion.jpg" alt="Captain Rex">
+            <div class="caption">The 501st Legion</div>
+        </div>
+        
+        <div class="slide">
+            <img src="./img/maul_on_throne.png" alt="Darth Maul ruling Mandalore">
+            <div class="caption">Ruler of Mandalore</div>
+        </div>
+
+        <button class="slider-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="slider-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+        
+    </div>
+    </section>
+
+<script src="./js/gallery.js"></script>
+</html>
