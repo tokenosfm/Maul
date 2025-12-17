@@ -26,7 +26,7 @@ let slideInterval;
 function startAutoPlay() {
     slideInterval = setInterval(() => {
         showSlide(currentSlide + 1);
-    }, 4000); 
+    }, 6000); 
 }
 function resetAutoPlay() {
     clearInterval(slideInterval);
@@ -34,3 +34,37 @@ function resetAutoPlay() {
 }
 startAutoPlay();
 
+function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start' });
+    } else {
+        console.log("Nie znaleziono sekcji o ID: " + sectionId);
+    }
+}
+function scrollToSection(sectionId) {
+    const allSections = document.querySelectorAll('.img-text');
+    
+    allSections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    const element = document.getElementById(sectionId);
+    
+    if (element) {
+
+        element.style.display = 'block';
+
+        setTimeout(() => {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }, 10);
+        
+    } else {
+        console.log("Nie znaleziono sekcji o ID: " + sectionId);
+    }
+}
