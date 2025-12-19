@@ -181,7 +181,6 @@ body, header {
     padding: 20px;
     border-radius: 8px;
     transform-origin: left center;
-    animation: fadeSlide 0.8s ease forwards;
     border: 1px solid rgba(178, 34, 34, 0.1); 
     box-shadow: 0 0 20px rgba(0,0,0,.8);
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);

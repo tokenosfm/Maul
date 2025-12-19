@@ -1,5 +1,7 @@
 const slides = document.querySelectorAll('.slide');
+
 let currentSlide = 0;
+
 function showSlide(index) {
     slides.forEach(slide => {
     slide.classList.remove('active');
@@ -26,10 +28,12 @@ function startAutoPlay() {
         showSlide(currentSlide + 1);
     }, 6000); 
 }
+
 function resetAutoPlay() {
     clearInterval(slideInterval);
     startAutoPlay();
 }
+
 startAutoPlay();
 
 function scrollToSection(sectionId) {
@@ -42,6 +46,7 @@ function scrollToSection(sectionId) {
         console.log("Nie znaleziono sekcji o ID: " + sectionId);
     }
 }
+
 function scrollToSection(sectionId) {
     const allSections = document.querySelectorAll('.img-text');
     
@@ -58,7 +63,7 @@ function scrollToSection(sectionId) {
         setTimeout(() => {
             element.scrollIntoView({
                 behavior: 'smooth',
-                block: 'center'
+                block: 'start'
             });
         }, 10);
         
