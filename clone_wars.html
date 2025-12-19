@@ -11,19 +11,26 @@
 </head>
 
 <body id="top">
-<header>
-    <div class="header-nav">
-        <a href="index.html" class="home-btn">Home</a>
-    </div>
 
- </header>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="maul.html" class="nav-link">Darth Maul</a>
+            <a href="clone_wars.html" class="nav-link">Clone Wars</a>
+            <a href="galactic_empire.html" class="nav-link">Empire</a>
+            <a href="darth_sidious.html" class="nav-link">Sidious</a>
+        </div>
+    </nav>
+    <header>
+
+    </header>
 
     <main>
 
     <section class="gallery-section">
     <div class="carousel-container">
         
-        <div class="slide active" onclick="scrollToSection('siege')">
+        <div class="slide" onclick="scrollToSection('siege')">
             <img src="./img/tano_vs_maul.jpg" alt="Ahsoka Tano fighting Maul">
             <div class="caption">Siege of Mandalore</div>
         </div>
@@ -52,12 +59,13 @@
         <button class="slider-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
         
     </div>
+    <h1>You can click on the images to take a closer look.</h1>
     </section>
 
     <section class="section-header">
         <h2>The Clone Wars</h2>
         <p>The Clone Wars was a galaxy-wide conflict that took place between the Galactic Republic and the Confederacy of Independent Systems. Spanning over three years, the war sparked numerous battles across various star systems, involving Jedi generals leading clone troopers against droid armies. Both sides were manipulated by the Sith Lord Darth Sidious, who orchestrated the war to weaken the Republic and eliminate the Jedi Order. The Clone Wars had a profound impact on the galaxy, leading to significant political changes and setting the stage for the rise of the Galactic Empire.</p>
-        <h1>You can click on the images to take a closer look.</h1>
+        
     </section>
 
     <section class="img-info-section">
@@ -123,5 +131,6 @@
         </div>
 </footer>
 <script src="./js/gallery.js"></script>
+<script src="./js/nav.js"></script>
 </body>
 </html>

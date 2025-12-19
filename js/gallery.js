@@ -4,7 +4,7 @@ let currentSlide = 0;
 
 function showSlide(index) {
     slides.forEach(slide => {
-    slide.classList.remove('active');
+        slide.classList.remove('active', 'prev', 'next');
     });
     if (index >= slides.length) {
         currentSlide = 0;
@@ -13,6 +13,10 @@ function showSlide(index) {
     } else {
         currentSlide = index;
     }
+    const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+    const nextIndex = (currentSlide + 1) % slides.length;
+    slides[prevIndex].classList.add('prev');
+    slides[nextIndex].classList.add('next');
     slides[currentSlide].classList.add('active');
 }
 
@@ -34,18 +38,8 @@ function resetAutoPlay() {
     startAutoPlay();
 }
 
+showSlide(currentSlide);
 startAutoPlay();
-
-function scrollToSection(sectionId) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-        element.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start' });
-    } else {
-        console.log("Nie znaleziono sekcji o ID: " + sectionId);
-    }
-}
 
 function scrollToSection(sectionId) {
     const allSections = document.querySelectorAll('.img-text');
