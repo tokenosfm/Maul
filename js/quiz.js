@@ -75,24 +75,40 @@ const nextButton = document.getElementById('next-btn');
 // Counters
 let currentQuestionIndex = 0;
 let score = 0;
+let testerMode = false;
 // Button handlers
-document.getElementById('start-btn').addEventListener('click', startQuiz);
+document.getElementById('start-normal-btn').addEventListener('click', () => {
+    startQuiz(false);
+});
+document.getElementById('start-tester-btn').addEventListener('click', () => {
+    startQuiz(true);
+});
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextQuestion();
 });
-document.getElementById('restart-btn').addEventListener('click', startQuiz);
+document.getElementById('restart-btn').addEventListener('click', () => {
+    startQuiz(testerMode);
+});
 // Functions
-function startQuiz() {
-  
+function startQuiz(isTesterMode) {
+    testerMode = isTesterMode;
     currentQuestionIndex = 0;
     score = 0;
-    
-    startScreen.classList.add('hide');
-    resultScreen.classList.add('hide');
-    questionScreen.classList.remove('hide');
-    
-    setNextQuestion();
+
+    startScreen.classList.add('transparent');
+
+    setTimeout(() => {
+        startScreen.classList.add('hide');
+        questionScreen.classList.remove('hide');
+        questionScreen.classList.add('transparent');
+        resultScreen.classList.add('hide');
+
+        setNextQuestion();
+        setTimeout(() => {
+            questionScreen.classList.remove('transparent');
+        }, 50);
+    }, 500);
 }
 function setNextQuestion() {
     resetState();
@@ -105,7 +121,12 @@ function setNextQuestion() {
 }
 function showQuestion(question) {
     document.getElementById('question-counter').innerText = `Question ${currentQuestionIndex + 1}/${questions.length}`;
-    document.getElementById('score-display').innerText = `Score: ${score}`;
+    
+    if (testerMode) {
+        document.getElementById('score-display').innerText = `Score: ${score} (TEST MODE)`;
+    } else {
+        document.getElementById('score-display').innerText = `Score: ${score}`;
+    }
 
     questionElement.innerText = question.question;
 
@@ -116,6 +137,10 @@ function showQuestion(question) {
         
         if (answer.correct) {
             button.dataset.correct = answer.correct;
+            
+            if (testerMode) {
+                button.classList.add('tester-highlight');
+            }
         }
         
         button.addEventListener('click', selectAnswer);
@@ -165,7 +190,7 @@ function showResults() {
     if (score === questions.length) {
         rankElement.innerText = "SITH LORD";
         rankElement.style.color = "#FFD700";
-    } else if (score >= 3) {
+    } else if (score >= 4) {
         rankElement.innerText = "SITH APPRENTICE";
         rankElement.style.color = "#B22222";
     } else {

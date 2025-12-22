@@ -23,23 +23,36 @@
 
     <main class="quiz-main">
         
-<div id="start-screen" class="quiz-container">
-    <h1>The Sith Trials</h1>
-    
-    <p class="intro-text">
-        Welcome to the Sith Trials, acolyte. You will be presented with a series of questions 
-        to test your knowledge of the Dark Side. Hesitation is defeat. 
-        Choose your path below.
-    </p>
+    <div id="start-screen" class="quiz-container">
+        <h1>The Sith Trials</h1>
+        
+        <p class="intro-text">
+            Welcome to the Sith Trials, acolyte. You will be presented with a series of questions 
+            to test your knowledge of the Dark Side. Hesitation is defeat. 
+            Choose your path below.
+        </p>
 
-    <div class="start-controls">
-        <a href="index.html" class="quiz-btn return-btn">Return to Safety</a>
-        
-        <button id="start-normal-btn" class="quiz-btn start-btn">Begin Trial</button>
-        
-        <button id="start-tester-btn" class="quiz-btn tester-btn">Tester Access (With Answers)</button>
+        <div class="start-controls">
+            <a href="index.html" class="quiz-btn return-btn">Return to Safety</a>
+            
+            <button id="start-normal-btn" class="quiz-btn start-btn">Begin Trial</button>
+            
+            <button id="start-tester-btn" class="quiz-btn tester-btn">Tester Access (With Answers)</button>
+        </div>
     </div>
-</div>
+    <div id="question-screen" class="quiz-container hide">
+        <div class="hud">
+            <span id="question-counter">Pytanie 0/0</span>
+            <span id="score-display">Wynik: 0</span>
+        </div>
+
+        <h2 id="question-text">Miejsce na pytanie...</h2>
+
+        <div id="answer-buttons" class="btn-grid">
+            </div>
+
+        <button id="next-btn" class="quiz-btn next-btn hide">Next</button>
+    </div>
 
         <div id="result-screen" class="quiz-container hide">
             <h2>Trial Complete</h2>
@@ -51,5 +64,28 @@
     </main>
 
     <script src="./js/quiz.js"></script>
+       <footer>
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-links">
+                <h3>Sith Archive</h3> <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="clone_wars.html">The Clone Wars</a></li>
+                    <li><a href="galactic_empire.html">Galactic Empire</a></li>
+                    <li><a href="darth_sidious.html">Darth Sidious</a></li>
+                </ul>
+            </div>
+            
+            <div class="button-action">
+                <a href="#top" class="back-to-top-btn">
+                    Back to Top ▲
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2025 Darth Maul Tribute. Created by Damian Zatorski.</p>
+        </div>
+    </div>
+   </footer>
 </body>
 </html>
