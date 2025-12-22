@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Sith Archives - Sith Trials</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/sith_trials.css"> <link rel="icon" href="./img/maul_icon.png">
+</head>
+<body id="top">
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="maul.html" class="nav-link">Darth Maul</a>
+            <a href="clone_wars.html" class="nav-link">Clone Wars</a>
+            <a href="galactic_empire.html" class="nav-link">Empire</a>
+            <a href="darth_sidious.html" class="nav-link">Sidious</a>
+            <a href="sith_trials.html" class="nav-link active">Sith Trials</a>
+        </div>
+    </nav>
+
+    <main class="quiz-main">
+        
+<div id="start-screen" class="quiz-container">
+    <h1>The Sith Trials</h1>
+    
+    <p class="intro-text">
+        Welcome to the Sith Trials, acolyte. You will be presented with a series of questions 
+        to test your knowledge of the Dark Side. Hesitation is defeat. 
+        Choose your path below.
+    </p>
+
+    <div class="start-controls">
+        <a href="index.html" class="quiz-btn return-btn">Return to Safety</a>
+        
+        <button id="start-normal-btn" class="quiz-btn start-btn">Begin Trial</button>
+        
+        <button id="start-tester-btn" class="quiz-btn tester-btn">Tester Access (With Answers)</button>
+    </div>
+</div>
+
+        <div id="result-screen" class="quiz-container hide">
+            <h2>Trial Complete</h2>
+            <p id="final-score">Your Score: 0</p>
+            <p id="sith-rank" class="rank-text">Apprentice</p>
+            <button id="restart-btn" class="quiz-btn">Attempt Again</button>
+        </div>
+
+    </main>
+
+    <script src="./js/quiz.js"></script>
+</body>
+</html>
