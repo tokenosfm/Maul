@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Sith Archives - Galactic Empire</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/clone_wars.css">
+    <link rel="stylesheet" href="./css/galactic_empire.css">
+    <link rel="icon" href="./img/maul_icon.png">
+</head>
+<body id="top">
+
+<nav class="main-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="dropdown">
+            <button class="nav-link dropbtn">Characters ▾</button>
+            <div class="dropdown-content">
+                <a href="maul.html">Darth Maul</a>
+                <a href="darth_sidious.html">Darth Sidious</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="nav-link dropbtn active">Galleries ▾</button>
+            <div class="dropdown-content">
+                <a href="clone_wars.html">The Clone Wars</a>
+                <a href="galactic_empire.html" style="color: #fff; font-weight: bold;">Galactic Empire</a>
+            </div>
+        </div>
+        <a href="sith_trials.html" class="nav-link">Sith Trials</a>
+    </div>
+</nav>
+<main>
+    <section class="gallery-section">
+        <div class="carousel-container">
+            <div class="slide active" onclick="scrollToSection('navy')">
+                <img src="./img/star_destroyer.png" alt="Imperial Star Destroyer">
+                <div class="caption">The Imperial Navy</div>
+            </div>
+            <div class="slide" onclick="scrollToSection('stormtroopers')">
+                <img src="./img/stormtroopers.png" alt="Stormtroopers marching">
+                <div class="caption">Stormtrooper Corps</div>
+            </div>
+            <div class="slide" onclick="scrollToSection('vader')">
+                <img src="./img/darth_vader.jpeg" alt="Darth Vader">
+                <div class="caption">The Emperor's Enforcer</div>
+            </div>
+            <div class="slide" onclick="scrollToSection('coruscant')">
+                <img src="./img/imperial_palace.png" alt="Imperial Palace on Coruscant">
+                <div class="caption">Imperial Center</div>
+            </div>
+            <div class="slide" onclick="scrollToSection('death-star')">
+                <img src="./img/death_star_fires.jpg" alt="Death Star firing">
+                <div class="caption">The Ultimate Weapon</div>
+            </div>
+
+            <button class="slider-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="slider-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        <h1>You can click on the images to take a closer look.</h1>
+    </section>
+    <section class="section-header">
+    <h2>Galactic Empire</h2>
+    <p>The Galactic Empire was a totalitarian regime that ruled the galaxy after the fall of the Republic. Established by Emperor Palpatine, the Empire sought to consolidate power and eliminate all opposition. The sole reason for its existence was to serve the Sith's agenda of domination and control. Under the Empire's rule, freedom and democracy were suppressed, and fear was used as a tool to maintain order. The Empire's military might, led by the Imperial Navy and enforced by the Stormtrooper Corps, ensured that dissent was swiftly crushed. The Empire's reign was short-lived, however, as the Rebel Alliance rose up to challenge its authority, ultimately leading to its downfall.</p>
+    </section>
+    <section class="img-info-section">
+        <div class="img-text" id="navy">
+            <h2>The Imperial Navy</h2>
+            <p>The Imperial Navy rose to prominence as the ancestor of the Republic's Grand Army of the Clone Wars. Following the fall of the Jedi Order and the Republic, the Imperial Navy became the primary military force ruling over the galaxy. The Navy consisted of massive Star Destroyers, TIE Fighters, and various other warships that projected the Empire's power across star systems.</p>
+            <img src="./img/star_destroyer.png" alt="Imperial Star Destroyer" class="info-image">
+            <p>These ships were instrumental in enforcing the Emperor's will, suppressing rebellions, and maintaining order throughout the galaxy. The Imperial Navy was known for its strict hierarchy, discipline, and ruthless tactics, making it a formidable force against any opposition. Its presence was a constant reminder of the Empire's dominance and the futility of resistance.</p>
+        </div>
+        <div class="img-text" id="stormtroopers">
+            <h2>Stormtrooper Corps</h2>
+            <p>The Stormtrooper Corps was the elite infantry force of the Galactic Empire. Comprised of highly trained soldiers, the Stormtroopers were the backbone of the Empire's military might. They were known for their distinctive white armor, which provided both protection and a symbol of the Empire's authority. Stormtroopers were deployed across the galaxy to enforce Imperial rule, suppress rebellions, and maintain order. They were often seen as ruthless enforcers, carrying out the Emperor's will without question. The Stormtrooper Corps played a crucial role in the Empire's efforts to control the galaxy, instilling fear and obedience among the populace.</p>
+            <img src="./img/stormtroopers.png" alt="Stormtroopers marching" class="info-image">
+            <p> As the clones of Jango Fett aged and their numbers dwindled, the Empire began recruiting regular citizens to fill the ranks of the Stormtrooper Corps. This transition marked a shift in the Empire's approach to military recruitment, relying more on conscription and indoctrination to maintain its forces. Despite their reputation for being faceless enforcers, Stormtroopers were a vital component of the Empire's strategy to maintain control over the galaxy. They were often deployed in large numbers, overwhelming any opposition with sheer force and firepower.</p>
+        </div>
+        <div class="img-text" id="vader">
+            <h2>The Emperor's Enforcer</h2>
+            <p>Darth Vader, formerly known as Anakin Skywalker, was the right hand of Emperor Palpatine and his third apprentice. As the Emperor's enforcer, Vader was responsible for carrying out the Sith Lord's will and ensuring that the Empire's enemies were dealt with swiftly and decisively. Though not an official member of the Imperial military, Vader wielded immense power and authority, often commanding entire fleets and legions of troops in the Emperor's name.</p>
+            <img src="./img/darth_vader.jpeg" alt="Darth Vader" class="info-image">
+            <p>Vader was feared throughout the galaxy for his ruthless tactics and unwavering loyalty to the Emperor. He was defacto leader of the Imperial Inquisitors, a group tasked with hunting down and eliminating surviving Jedi. Vader's presence affected all even highest rangking Imperial officers, such as Grand Moff Tarkin, who treated him with a mix of respect and caution. Vader's role as the Emperor's enforcer made him one of the most powerful and feared figures in the galaxy, embodying the dark side of the Force and the might of the Galactic Empire.</p>
+        </div>
+        <div class="img-text" id="coruscant">
+            <h2>Imperial Center</h2>
+            <p>Coruscant, the capital of the Galactic Empire, was a bustling metropolis that served as the political and administrative center of the galaxy. The Imperial Palace, located on Coruscant, was the residence of Emperor Palpatine and the seat of Imperial power. It was built atop the ruins of the Jedi Temple, symbolizing the Empire's dominance over the former Republic and its institutions.</p>
+            <img src="./img/imperial_palace.png" alt="Imperial Palace on Coruscant" class="info-image">
+            <p>After defeating the Jedi Order, the Empire transformed Coruscant into a symbol of its authority and control. The city was heavily fortified, with numerous military installations and security measures in place to protect the Emperor and his regime. Coruscant was also home to the Imperial Senate, which served as a facade of democracy while the Emperor held ultimate power. The planet's towering skyscrapers and sprawling urban landscape reflected the Empire's ambition and its desire to project strength and order throughout the galaxy.</p>
+        </div>
+        <div class="img-text" id="death-star">
+            <h2>The Ultimate Weapon</h2>
+            <p>The Death Star was a massive space station and superweapon capable of destroying entire planets with its powerful superlaser. The project surculated around the time of the Clone Wars, with initial designs conceived by the Geonosians. However, it was under the Galactic Empire that the Death Star was fully realized and constructed. Galen Erso, a brilliant scientist, was coerced into contributing to the project, embedding a critical flaw in the station's design that would later be exploited by the Rebel Alliance.</p>
+            <img src="./img/death_star_fires.jpg" alt="Death Star firing" class="info-image">
+            <p>The Death Star represented the pinnacle of the Empire's technological prowess and its willingness to use fear as a means of control. Its mere existence was a deterrent to rebellion, as the threat of planetary destruction loomed over any who dared oppose the Empire. The Death Star was first used to devastating effect on the desert planet of Jedha, obliterating the Holy City and demonstrating the Empire's ruthless efficiency. However, some time later, the Death Star was destroyed by the Rebel Alliance, marking a significant turning point in the conflict.</p>
+    </section>
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-top">
+                <div class="footer-links">
+                    <h3>Sith Archive</h3> <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="maul.html">Maul</a></li>
+                        <li><a href="galactic_empire.html">Galactic Empire</a></li>
+                        <li><a href="darth_sidious.html">Darth Sidious</a></li>
+                    </ul>
+                </div>
+                
+                <div class="button-action">
+                    <a href="#top" class="back-to-top-btn">
+                        Back to Top ▲
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Darth Maul Tribute. Created by Damian Zatorski.</p>
+            </div>
+        </div>
+</footer>
+<script src="./js/gallery.js"></script>
+<script src="./js/nav.js"></script>

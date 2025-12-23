@@ -15,6 +15,8 @@
     text-align: center;
     transition: opacity 0.5s ease-in-out;
     opacity: 1;
+    position: relative;
+    overflow: hidden;
 }
 .transparent {
     opacity: 0;
@@ -64,6 +66,18 @@ p {
     background-color: #800000;
     box-shadow: 0 0 15px var(--line-color);
 }
+#next-btn {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#next-btn.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    display: block;
+}
 .quiz-btn.correct {
     background-color: #21904f;
     color: #000;
@@ -102,6 +116,14 @@ p {
     max-width: 400px;
     margin: 0 auto;
 }
+.result-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
 .return-btn {
     text-decoration: none;
     display: block;
@@ -114,15 +136,24 @@ p {
     color: #fff;
     background: rgba(255, 255, 255, 0.1);
 }
-.tester-btn {
-    border-color: #FFD700;
+.tester-corner-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: transparent;
+    border: 1px solid #FFD700;
     color: #FFD700;
-    font-size: 0.9em;
-    opacity: 0.7;
+    font-size: 0.7em;
+    padding: 5px 10px;
+    opacity: 0.3;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: inherit;
+    transition: all 0.3s ease;
 }
-.tester-btn:hover {
-    background: rgba(255, 215, 0, 0.1);
+.tester-corner-btn:hover {
     opacity: 1;
+    background: rgba(255, 215, 0, 0.1);
     box-shadow: 0 0 10px #FFD700;
 }
 .tester-highlight {

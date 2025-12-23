@@ -62,13 +62,40 @@ const questions = [
             { text: "Anakin Skywalker", correct: false },
             { text: "Ahsoka Tano", correct: false }
         ]
+    },
+    {
+        question: "How many aprentices did Darth Sidious have?",
+        answers: [
+            { text: "One", correct: false },
+            { text: "Two", correct: false },
+            { text: "Three", correct: true },
+            { text: "Four", correct: false }
+        ]
+    },
+    {
+        question: "How many times did first Death Star managed to destroy a planet?",
+        answers: [
+            { text: "One", correct: true },
+            { text: "Two", correct: false },
+            { text: "Three", correct: false },
+            { text: "None", correct: false }
+        ]
+    },
+    {
+        question: "What was the name of the planet where the Death Star has fired its superlaser for the first time?",
+        answers: [
+            { text: "Alderaan", correct: false },
+            { text: "Jedha", correct: true },
+            { text: "Yavin IV", correct: false },
+            { text: "Scarif", correct: false }
+        ]
     }
 ];
 // DOM elements
 const startScreen = document.getElementById('start-screen');
 const questionScreen = document.getElementById('question-screen');
 const resultScreen = document.getElementById('result-screen');
-
+const restartTesterButton = document.getElementById('restart-tester-btn');
 const questionElement = document.getElementById('question-text');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const nextButton = document.getElementById('next-btn');
@@ -76,6 +103,7 @@ const nextButton = document.getElementById('next-btn');
 let currentQuestionIndex = 0;
 let score = 0;
 let testerMode = false;
+let shuffledQuestions;
 // Button handlers
 document.getElementById('start-normal-btn').addEventListener('click', () => {
     startQuiz(false);
@@ -87,12 +115,18 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextQuestion();
 });
+if (restartTesterButton) {
+    restartTesterButton.addEventListener('click', () => {
+        startQuiz(true);
+    });
+}
 document.getElementById('restart-btn').addEventListener('click', () => {
-    startQuiz(testerMode);
+    startQuiz(false);
 });
 // Functions
 function startQuiz(isTesterMode) {
     testerMode = isTesterMode;
+    shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     score = 0;
 
@@ -113,8 +147,8 @@ function startQuiz(isTesterMode) {
 function setNextQuestion() {
     resetState();
     
-    if (currentQuestionIndex < questions.length) {
-        showQuestion(questions[currentQuestionIndex]);
+    if (currentQuestionIndex < shuffledQuestions.length) {
+        showQuestion(shuffledQuestions[currentQuestionIndex]);
     } else {
         showResults();
     }
@@ -130,7 +164,9 @@ function showQuestion(question) {
 
     questionElement.innerText = question.question;
 
-    question.answers.forEach(answer => {
+    const answersToDisplay = [...question.answers].sort(() => Math.random() - 0.5);
+
+    answersToDisplay.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('quiz-btn');
@@ -148,7 +184,7 @@ function showQuestion(question) {
     });
 }
 function resetState() {
-    nextButton.classList.add('hide');
+    nextButton.classList.remove('visible');
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
@@ -165,7 +201,7 @@ function selectAnswer(e) {
         setStatusClass(button, button.dataset.correct);
         button.disabled = true;
     });
-    nextButton.classList.remove('hide');
+    nextButton.classList.add('visible');
 }
 function setStatusClass(element, correct) {
     clearStatusClass(element);
@@ -196,5 +232,13 @@ function showResults() {
     } else {
         rankElement.innerText = "UNWORTHY";
         rankElement.style.color = "#555";
+    }
+
+    if (testerMode) {
+        restartTesterButton.classList.remove('hide');
+        document.getElementById('restart-btn').innerText = "Attempt Again (Normal)";
+    } else {
+        restartTesterButton.classList.add('hide');
+        document.getElementById('restart-btn').innerText = "Attempt Again";
     }
 }

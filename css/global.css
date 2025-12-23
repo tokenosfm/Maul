@@ -95,6 +95,58 @@ header h1{
 :target {
     scroll-margin-top: 80px;
 }
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 1.2em;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(10, 10, 10, 0.95);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    z-index: 1000;
+    border: 1px solid #333;
+    border-radius: 0 0 5px 5px;
+}
+.dropdown-content a {
+    color: #ccc;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #800000;
+    color: #fff;
+}
+.dropdown:hover .dropbtn {
+    color: #fff;
+    text-shadow: 0 0 10px #FFD700;
+}
+.nav-link.active {
+    color: #fff;
+    border-bottom: 2px solid #b22222; 
+}
+.nav-link:hover, 
+.dropdown:hover .dropbtn {
+    color: #fff;
+    background: rgba(178, 34, 34, 0.2);
+    border-color: var(--line-color);
+    text-shadow: 0 0 8px #ff0000;
+    border-radius: 4px;
+}
 /* footer */
 footer {
     background-color: #000;

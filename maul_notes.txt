@@ -1,3 +1,1 @@
-1. rozbudować na inne strony.
-2. dodać więcej przycisków nawigacyjnych
-3. dodać javascript do strony
+1.Dodać linki nawigacyjne kierujące na poszczególne części strony

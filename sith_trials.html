@@ -9,17 +9,30 @@
     <link rel="stylesheet" href="./css/sith_trials.css"> <link rel="icon" href="./img/maul_icon.png">
 </head>
 <body id="top">
+<script src="./js/nav.js"></script>
+<nav class="main-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-link">Home</a>
 
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="maul.html" class="nav-link">Darth Maul</a>
-            <a href="clone_wars.html" class="nav-link">Clone Wars</a>
-            <a href="galactic_empire.html" class="nav-link">Empire</a>
-            <a href="darth_sidious.html" class="nav-link">Sidious</a>
-            <a href="sith_trials.html" class="nav-link active">Sith Trials</a>
+        <div class="dropdown">
+            <button class="nav-link dropbtn">Characters ▾</button>
+            <div class="dropdown-content">
+                <a href="maul.html">Darth Maul</a>
+                <a href="darth_sidious.html">Darth Sidious</a>
+            </div>
         </div>
-    </nav>
+
+        <div class="dropdown">
+            <button class="nav-link dropbtn">Galleries ▾</button>
+            <div class="dropdown-content">
+                <a href="clone_wars.html">The Clone Wars</a>
+                <a href="galactic_empire.html">Galactic Empire</a>
+            </div>
+        </div>
+
+        <a href="sith_trials.html" class="nav-link active">Sith Trials</a>
+    </div>
+</nav>
 
     <main class="quiz-main">
         
@@ -34,11 +47,9 @@
 
         <div class="start-controls">
             <a href="index.html" class="quiz-btn return-btn">Return to Safety</a>
-            
             <button id="start-normal-btn" class="quiz-btn start-btn">Begin Trial</button>
-            
-            <button id="start-tester-btn" class="quiz-btn tester-btn">Tester Access (With Answers)</button>
         </div>
+            <button id="start-tester-btn" class="quiz-btn tester-corner-btn">&#x26A1;Tester Access (With Answers)</button>
     </div>
     <div id="question-screen" class="quiz-container hide">
         <div class="hud">
@@ -51,25 +62,28 @@
         <div id="answer-buttons" class="btn-grid">
             </div>
 
-        <button id="next-btn" class="quiz-btn next-btn hide">Next</button>
+        <button id="next-btn" class="quiz-btn next-btn">Next</button>
     </div>
 
-        <div id="result-screen" class="quiz-container hide">
-            <h2>Trial Complete</h2>
-            <p id="final-score">Your Score: 0</p>
-            <p id="sith-rank" class="rank-text">Apprentice</p>
+    <div id="result-screen" class="quiz-container hide">
+        <h2>Trial Complete</h2>
+        <p id="final-score">Your Score: 0</p>
+        <p id="sith-rank" class="rank-text">Apprentice</p>
+        
+        <div class="result-controls">
             <button id="restart-btn" class="quiz-btn">Attempt Again</button>
+            <button id="restart-tester-btn" class="quiz-btn hide">Attempt Again (Tester)</button>
         </div>
+    </div>
 
     </main>
-
     <script src="./js/quiz.js"></script>
        <footer>
     <div class="footer-container">
         <div class="footer-top">
             <div class="footer-links">
                 <h3>Sith Archive</h3> <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="maul.html">Maul</a></li>
                     <li><a href="clone_wars.html">The Clone Wars</a></li>
                     <li><a href="galactic_empire.html">Galactic Empire</a></li>
                     <li><a href="darth_sidious.html">Darth Sidious</a></li>

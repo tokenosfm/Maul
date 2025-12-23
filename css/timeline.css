@@ -170,9 +170,20 @@
 .timeline-labels .empire-era {
     top: 1900px;
 }
+.timeline-sidious .empire-era {
+    top: 300px !important;
+}
+.timeline-sidious .clone-wars-era {
+    top: 300px !important;
+}
+.timeline-sidious .republic-era {
+    top: 550px !important;
+}
 .timeline img {
     width: 100%;
     max-width: 300px; 
+    max-height: 200px;
+    object-fit: cover;
     height: auto; 
     display: block; 
     margin: 15px 0;

@@ -15,7 +15,7 @@
     box-shadow: 0 0 15px var(--line-color);
     text-shadow: 0 0 5px #fff;
 }
-.maul-quote-author {
+.quote-author {
     font-size: 15px;
     font-style: italic;
     color: rgb(255, 255, 255);
