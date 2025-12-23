@@ -82,7 +82,6 @@
     margin-top: 5px;
 }
     /* images */
-
 .side-content-block img {
     max-width: 350px;
     height: auto;
@@ -91,11 +90,31 @@
     margin-top: 10px;
     border-radius: 5px;
     box-shadow: 0 0 25px rgba(255,0,0,.4);
-    transition: transform .4s ease, box-shadow .4s ease;
+    transition: box-shadow .4s ease;
 }
 .side-content-block img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 45px var(--line-color);
+}
+.image-group {
+    display: inline-block;
+    transition: transform 0.4s ease;
+    border-radius: 5px;
+}
+.image-group:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+.image-group:hover img {
+    box-shadow: 0 0 45px var(--line-color);
+}
+.image-group .img-caption {
+    transition: color 0.3s ease;
+    padding: 10px 0;
+}
+.image-group:hover .img-caption {
+    color: #fff;
+    text-shadow: 0 0 5px var(--line-color);
 }
 @keyframes fadeSlide {
     from {

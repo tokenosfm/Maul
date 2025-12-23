@@ -4,7 +4,7 @@
     text-align: center;
     padding: 60px 20px;
     border-bottom: 2px solid var(--line-color);
-    background: radial-gradient(circle at center, #0c0707, #000);
+    background: #000;
 }
 
 .home-header h1 {
@@ -84,6 +84,9 @@ header h1 {
 
 .sidious-card {
     background: linear-gradient(45deg, rgb(26, 26, 23), #000);
+}
+.sithtrials-card {
+    background: linear-gradient(45deg, #220000, #000);
 }
 
 

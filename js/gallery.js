@@ -65,3 +65,13 @@ function scrollToSection(sectionId) {
         console.log("Nie znaleziono sekcji o ID: " + sectionId);
     }
 }
+function handleHashNavigation() {
+    const hash = window.location.hash;
+
+    if (hash) {
+        const sectionId = hash.substring(1);
+        scrollToSection(sectionId);
+    }
+}
+window.addEventListener('load', handleHashNavigation);
+window.addEventListener('hashchange', handleHashNavigation);

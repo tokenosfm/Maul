@@ -13,6 +13,19 @@ html, body {
 html {
     scroll-behavior: smooth;
 }
+.content-link {
+    color: #FFD700;
+    text-decoration: none;
+    border-bottom: 1px dotted #FFD700;
+    transition: all 0.3s ease;
+}
+
+.content-link:hover {
+    color: #fff;
+    background-color: rgba(178, 34, 34, 0.3);
+    border-bottom: 1px solid #fff;
+    text-shadow: 0 0 5px #FFD700;
+}
 
     /* header */
 header {
